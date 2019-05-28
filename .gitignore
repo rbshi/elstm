@@ -1,0 +1,10 @@
+.idea/
+__pycache__/
+.pyre/
+plot/
+*l*.h
+*.log
+*.ckpt*
+*.csv
+*.npz
+data/
