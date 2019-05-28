@@ -47,7 +47,7 @@ where the arguments represent:
 
 The RISC-V toolchain is forked from the [original repo][rocket-chip], and the E-LSTM accelerator cycle-level simulation model is added in. Please reference the following brief to understand the framework and test the accelerator. 
 
-- **IMPORTANT:** Prepare the submodules of [rocket-chip](./rocket-chip) recursively by running `git submodule update --init --recursive` in the root folder. 
+- **IMPORTANT:** Prepare the submodules of [rocket-chip](./rocket-chip) recursively by running `git submodule update --init --recursive --remote` in the root folder. 
 - [riscv-tools](./rocket-chip/riscv-tools): all software toolchains and simulator of RISC-V
     - [riscv-tools/riscv-isa-sim](./rocket-chip/riscv-tools/riscv-isa-sim): Spike, a quasi cycle-level simulator of RISC-V system.
         - [riscv-tools/riscv-isa-sim/elstm_rocc](./rocket-chip/riscv-tools/riscv-isa-sim/elstm_rocc): behavioral model of E-LSTM accelerator that coupled with RISC-V via ROCC interface. 
