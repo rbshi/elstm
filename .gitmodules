@@ -1,0 +1,4 @@
+[submodule "rocket-chip"]
+	path = rocket-chip
+	url = https://github.com/rbshi/rocket-chip.git
+	branch = rocc/mm

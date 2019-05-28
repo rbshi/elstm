@@ -47,7 +47,7 @@ where the arguments represent:
 
 The RISC-V toolchain is forked from the [original repo][rocket-chip], and the E-LSTM accelerator cycle-level simulation model is added in. Please reference the following brief to understand the framework and test the accelerator. 
 
-<!-- - **Important toolset** -->
+- **IMPORTANT:** Prepare the submodules of [rocket-chip](./rocket-chip) recursively by running `git submodule update --init --recursive` in the root folder. 
 - [riscv-tools](./rocket-chip/riscv-tools): all software toolchains and simulator of RISC-V
     - [riscv-tools/riscv-isa-sim](./rocket-chip/riscv-tools/riscv-isa-sim): Spike, a quasi cycle-level simulator of RISC-V system.
         - [riscv-tools/riscv-isa-sim/elstm_rocc](./rocket-chip/riscv-tools/riscv-isa-sim/elstm_rocc): behavioral model of E-LSTM accelerator that coupled with RISC-V via ROCC interface. 
@@ -60,7 +60,7 @@ The RISC-V toolchain is forked from the [original repo][rocket-chip], and the E-
         wget https://storage.googleapis.com/rbsharing/elstm/weight_header.tar.gz
         tar -xzvf weight_header.tar.gz
         ```
-        - change the included header file and layer corresponding variables in the `elstm.c` for a specific layer; 
+        - change the included header file and layer corresponding variables in the `elstm.c` for a particular layer; 
         - run `make` to compile the host program for E-LSTM simulation.
         - run `spike --extension=elstm_rocc elstm.riscv` for simulation, the program iteratively processed the 20 input sequences and gives the cycle cost.
         - For the control instruction and workflow details in `elstm.c`, please refere to [elstm-instruction.md](./rocket-chip/riscv-tools/riscv-isa-sim/elstm_rocc/elstm-instruction.md). 
